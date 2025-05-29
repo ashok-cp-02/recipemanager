@@ -7538,6 +7538,30 @@
             "masterid": "010",
             "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Approval\"}]",
             "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "00011",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Whole Wheat Bread\"},{\"optionid\":\"002\",\"optionvalue\":\"Choco Chip Cookie\"},{\"optionid\":\"003\",\"optionvalue\":\"Blueberry Muffin\"},{\"optionid\":\"004\",\"optionvalue\":\"Gluten-Free Brownie\"},{\"optionid\":\"005\",\"optionvalue\":\"Gluten-Free Brownie\"},{\"optionid\":\"006\",\"optionvalue\":\"Cinnamon Roll\"},{\"optionid\":\"007\",\"optionvalue\":\"Banana Walnut Bread\"},{\"optionid\":\"008\",\"optionvalue\":\"Lemon Tart\"},{\"optionid\":\"009\",\"optionvalue\":\"Almond Croissant\"},{\"optionid\":\"009\",\"optionvalue\":\"Vegan Chocolate Cake\"},{\"optionid\":\"0010\",\"optionvalue\":\"Multigrain Bagel\"}]",
+            "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "00012",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Breads\"},{\"optionid\":\"002\",\"optionvalue\":\"Cookies\"},{\"optionid\":\"003\",\"optionvalue\":\"Muffins\"},{\"optionid\":\"004\",\"optionvalue\":\"Brownies\"},{\"optionid\":\"005\",\"optionvalue\":\"Pastries\"},{\"optionid\":\"006\",\"optionvalue\":\"Breads\"},{\"optionid\":\"007\",\"optionvalue\":\"Tarts\"},{\"optionid\":\"008\",\"optionvalue\":\"Cakes\"}]",
+            "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "00013",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"kg\"},{\"optionid\":\"002\",\"optionvalue\":\"g\"}]",
+            "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "00014",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Active\"},{\"optionid\":\"002\",\"optionvalue\":\"InActive\"}]",
+            "groupvalue": {}
           }
         ]
       },
@@ -7572,24 +7596,6 @@
               "listfields": [
                 {
                   "id": "recipe00",
-                  "name": "Recipe Code",
-                  "lablekey": "entity-jobtitle-lbl",
-                  "columnwidth": 150,
-                  "seqno": 1,
-                  "masterid": "",
-                  "controltype": "textbox",
-                  "attrtype": "text",
-                  "currencytype": null,
-                  "api_name": "DisplayName",
-                  "visible": true,
-                  "displayapiname": "RecipeCode",
-                  "inlineeditable": null,
-                  "istitle": true,
-                  "isdate": false,
-                  "islookup": false
-                },
-                {
-                  "id": "recipe01",
                   "name": "Recipe Name",
                   "lablekey": "entity-code-lbl",
                   "columnwidth": 150,
@@ -7602,13 +7608,13 @@
                   "visible": true,
                   "displayapiname": "RecipeName",
                   "inlineeditable": null,
-                  "istitle": false,
+                  "istitle": true,
                   "isdate": false,
                   "islookup": false
                 },
                 {
-                  "id": "recipe02",
-                  "name": "Version",
+                  "id": "recipe01",
+                  "name": "Recipe Code",
                   "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
@@ -7618,7 +7624,25 @@
                   "currencytype": null,
                   "api_name": "DisplayName",
                   "visible": true,
-                  "displayapiname": "Version",
+                  "displayapiname": "RecipeCode",
+                  "inlineeditable": null,
+                  "istitle": false,
+                  "isdate": false,
+                  "islookup": false
+                },
+                {
+                  "id": "recipe02",
+                  "name": "Category",
+                  "lablekey": "entity-code-lbl",
+                  "columnwidth": 150,
+                  "seqno": 1,
+                  "masterid": "",
+                  "controltype": "textbox",
+                  "attrtype": "text",
+                  "currencytype": null,
+                  "api_name": "DisplayName",
+                  "visible": true,
+                  "displayapiname": "Category",
                   "inlineeditable": null,
                   "istitle": false,
                   "isdate": false,
@@ -7626,7 +7650,7 @@
                 },
                 {
                   "id": "recipe03",
-                  "name": "Released",
+                  "name": "# of servings (per 100g)",
                   "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
@@ -7636,7 +7660,7 @@
                   "currencytype": null,
                   "api_name": "DisplayName",
                   "visible": true,
-                  "displayapiname": "Released",
+                  "displayapiname": "servings",
                   "inlineeditable": null,
                   "istitle": false,
                   "isdate": false,
@@ -7644,8 +7668,8 @@
                 },
                 {
                   "id": "recipe04",
-                  "name": "Recipe Cost",
-                  "lablekey": "entity-name-lbl",
+                  "name": "Serving Size",
+                  "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
                   "masterid": "",
@@ -7654,7 +7678,7 @@
                   "currencytype": null,
                   "api_name": "DisplayName",
                   "visible": true,
-                  "displayapiname": "RecipeCost",
+                  "displayapiname": "servingsize",
                   "inlineeditable": null,
                   "istitle": false,
                   "isdate": false,
@@ -7662,8 +7686,45 @@
                 },
                 {
                   "id": "recipe05",
+                  "name": "Measure Unit",
+                  "lablekey": "entity-jobtitle-lbl",
+                  "columnwidth": 150,
+                  "seqno": 1,
+                  "masterid": "",
+                  "controltype": "textbox",
+                  "attrtype": "text",
+                  "currencytype": null,
+                  "api_name": "DisplayName",
+                  "visible": true,
+                  "displayapiname": "MeasureUnit",
+                  "inlineeditable": null,
+                  "istitle": false,
+                  "isdate": false,
+                  "islookup": false
+                },
+
+                {
+                  "id": "recipe06",
+                  "name": "Cost (USD)",
+                  "lablekey": "entity-jobtitle-lbl",
+                  "columnwidth": 150,
+                  "seqno": 1,
+                  "masterid": "",
+                  "controltype": "textbox",
+                  "attrtype": "text",
+                  "currencytype": "USD",
+                  "api_name": "DisplayName",
+                  "visible": true,
+                  "displayapiname": "CostUSD",
+                  "inlineeditable": null,
+                  "istitle": false,
+                  "isdate": false,
+                  "islookup": false
+                },
+                {
+                  "id": "recipe07",
                   "name": "Recipe Status",
-                  "lablekey": "entity-name-lbl",
+                  "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
                   "masterid": "",
@@ -7677,45 +7738,76 @@
                   "istitle": false,
                   "isdate": false,
                   "islookup": false
+                },
+                {
+                  "id": "recipe08",
+                  "name": "Release Status",
+                  "lablekey": "entity-jobtitle-lbl",
+                  "columnwidth": 150,
+                  "seqno": 1,
+                  "masterid": "",
+                  "controltype": "textbox",
+                  "attrtype": "text",
+                  "currencytype": null,
+                  "api_name": "DisplayName",
+                  "visible": true,
+                  "displayapiname": "ReleaseStatus",
+                  "inlineeditable": null,
+                  "istitle": false,
+                  "isdate": false,
+                  "islookup": false
                 }
               ],
               "filterfields": [
                 {
                   "id": "001",
-                  "name": "Search Rescipe",
+                  "name": "Recipe Name",
                   "lablekey": "entity-type-lbl",
                   "seqno": 5,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "multiselect",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "00011",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 },
                 {
                   "id": "002",
-                  "name": "Release Status",
+                  "name": "Category",
                   "lablekey": "entity-type-lbl",
                   "seqno": 6,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "multiselect",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "00012",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 },
                 {
                   "id": "003",
-                  "name": "Version",
+                  "name": "Measure Unit",
                   "lablekey": "entity-type-lbl",
                   "seqno": 7,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "multiselect",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "00013",
+                  "apioutputskey": "optionid",
+                  "apioutputvalue": "optionvalue"
+                },
+                {
+                  "id": "004",
+                  "name": "Recipe Status",
+                  "lablekey": "entity-type-lbl",
+                  "seqno": 7,
+                  "filtercontroltype": "multiselect",
+                  "isquickfilter": true,
+                  "api_name": "EntityType",
+                  "islookup": true,
+                  "masterid": "00014",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 }
@@ -7845,26 +7937,8 @@
           "masterid": "",
           "controltype": "textbox",
           "attrtype": "text",
-          "api_name": "RecipeCode",
-          "columnwidth": 150
-        },
-        {
-          "id": "recipe011",
-          "seqno": 1,
-          "masterid": "",
-          "controltype": "textbox",
-          "attrtype": "text",
           "api_name": "RecipeName",
-          "columnwidth": 200
-        },
-        {
-          "id": "recipe012",
-          "seqno": 1,
-          "masterid": "",
-          "controltype": "textbox",
-          "attrtype": "text",
-          "api_name": "Version",
-          "columnwidth": 200
+          "columnwidth": 150
         },
         {
           "id": "recipe01",
@@ -7872,18 +7946,17 @@
           "masterid": "",
           "controltype": "textbox",
           "attrtype": "text",
-          "api_name": "Released",
+          "api_name": "RecipeCode",
           "columnwidth": 150
         },
-
         {
           "id": "recipe02",
           "seqno": 1,
           "masterid": "",
           "controltype": "textbox",
           "attrtype": "text",
-          "api_name": "RecipeCost",
-          "columnwidth": 100
+          "api_name": "Category",
+          "columnwidth": 150
         },
         {
           "id": "recipe03",
@@ -7891,8 +7964,53 @@
           "masterid": "",
           "controltype": "textbox",
           "attrtype": "text",
+          "api_name": "servings",
+          "columnwidth": 250
+        },
+        {
+          "id": "recipe04",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "servingsize",
+          "columnwidth": 150
+        },
+        {
+          "id": "recipe05",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "MeasureUnit",
+          "columnwidth": 150
+        },
+        {
+          "id": "recipe06",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "CostUSD",
+          "columnwidth": 150
+        },
+        {
+          "id": "recipe07",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
           "api_name": "RecipeStatus",
-          "columnwidth": 100
+          "columnwidth": 150
+        },
+        {
+          "id": "recipe08",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "ReleaseStatus",
+          "columnwidth": 150
         }
       ]
     }
@@ -7902,60 +8020,125 @@
       "data": [
         {
           "id": "01",
-          "RecipeCode": "REC26409",
-          "RecipeName": "Broiche",
-          "Version": "V1.oe",
-          "Released": "Yes",
-          "RecipeCost": "20.00",
-          "RecipeStatus": "Released"
+          "RecipeName": "Whole Wheat Bread",
+          "RecipeCode": "RCP-001",
+          "Category": "Breads",
+          "servings": "12",
+          "servingsize": "1.2",
+          "MeasureUnit": "kg",
+          "CostUSD": "1.1",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
         },
         {
           "id": "02",
-          "RecipeCode": "REC26409",
-          "RecipeName": "Croisant",
-          "Version": "V1.oe",
-          "Released": "Yes",
-          "RecipeCost": "20.00",
-          "RecipeStatus": "Draft"
+          "RecipeName": "Choco Chip Cookie",
+          "RecipeCode": "RCP-002",
+          "Category": "Cookies",
+          "servings": "1",
+          "servingsize": "45",
+          "MeasureUnit": "g",
+          "CostUSD": "0.75",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
         },
         {
-          "id": "01",
-          "RecipeCode": "REC26409",
-          "RecipeName": "Brownie",
-          "Version": "V1.oe",
-          "Released": "Yes",
-          "RecipeCost": "20.00",
-          "RecipeStatus": "UnReleased"
+          "id": "03",
+          "RecipeName": "Blueberry Muffin",
+          "RecipeCode": "RCP-003",
+          "Category": "Muffins",
+          "servings": "1",
+          "servingsize": "110",
+          "MeasureUnit": "g",
+          "CostUSD": "0.95",
+          "RecipeStatus": "InActive",
+          "ReleaseStatus": "UnReleased"
         },
         {
-          "id": "01",
-          "RecipeCode": "REC26409",
-          "RecipeName": "Ring Dunguts",
-          "Version": "V1.oe",
-          "Released": "Yes",
-          "RecipeCost": "20.00",
-          "RecipeStatus": "Draft"
+          "id": "04",
+          "RecipeName": "Gluten-Free Brownie",
+          "RecipeCode": "RCP-004",
+          "Category": "Brownies",
+          "servings": "1",
+          "servingsize": "60",
+          "MeasureUnit": "g",
+          "CostUSD": "1.3",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
         },
         {
-          "id": "01",
-          "RecipeCode": "REC26409",
-          "RecipeName": "Raisin Cookie",
-          "Version": "V1.oe",
-          "Released": "Yes",
-          "RecipeCost": "20.00",
-          "RecipeStatus": "Released"
+          "id": "05",
+          "RecipeName": "Cinnamon Roll",
+          "RecipeCode": "RCP-005",
+          "Category": "Pastries",
+          "servings": "1",
+          "servingsize": "85",
+          "MeasureUnit": "g",
+          "CostUSD": "1.2",
+          "RecipeStatus": "InActive",
+          "ReleaseStatus": "UnReleased"
         },
         {
-          "id": "01",
-          "RecipeCode": "REC26409",
-          "RecipeName": "Chocochip Cookie",
-          "Version": "V1.oe",
-          "Released": "Yes",
-          "RecipeCost": "20.00",
-          "RecipeStatus": "Released"
+          "id": "06",
+          "RecipeName": "Banana Walnut Bread",
+          "RecipeCode": "RCP-006",
+          "Category": "Breads",
+          "servings": "2",
+          "servingsize": "1",
+          "MeasureUnit": "kg",
+          "CostUSD": "1.4",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
+        },
+        {
+          "id": "07",
+          "RecipeName": "Lemon Tart",
+          "RecipeCode": "RCP-007",
+          "Category": "Tarts",
+          "servings": "2",
+          "servingsize": "100",
+          "MeasureUnit": "g",
+          "CostUSD": "1.55",
+          "RecipeStatus": "InActive",
+          "ReleaseStatus": "UnReleased"
+        },
+        {
+          "id": "08",
+          "RecipeName": "Almond Croissant",
+          "RecipeCode": "RCP-008",
+          "Category": "Pastries",
+          "servings": "1",
+          "servingsize": "100",
+          "MeasureUnit": "g",
+          "CostUSD": "1.85",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
+        },
+        {
+          "id": "09",
+          "RecipeName": "Vegan Chocolate Cake",
+          "RecipeCode": "RCP-009",
+          "Category": "Cakes",
+          "servings": "3",
+          "servingsize": "1.5",
+          "MeasureUnit": "kg",
+          "CostUSD": "2.25",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
+        },
+        {
+          "id": "10",
+          "RecipeName": "Multigrain Bagel",
+          "RecipeCode": "RCP-010",
+          "Category": "Breads",
+          "servings": "1",
+          "servingsize": "95",
+          "MeasureUnit": "g",
+          "CostUSD": "1",
+          "RecipeStatus": "Active",
+          "ReleaseStatus": "Released"
         }
       ],
-
       "totalRecords": 20
     }
   },
@@ -8087,8 +8270,20 @@
           },
           {
             "islookup": true,
+            "masterid": "7800001",
+            "mastervalues": "[{\"optionid\":\"7001\",\"optionvalue\":\"Online\"},{\"optionid\":\"7002\",\"optionvalue\":\"Face To Face\"}]",
+            "groupvalue": {}
+          },
+          {
+            "islookup": true,
             "masterid": "010",
             "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Approval\"}]",
+            "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "0011",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Whole Wheat Loaf\"},{\"optionid\":\"002\",\"optionvalue\":\"Ciabatta Rolls\"},{\"optionid\":\"003\",\"optionvalue\":\"Baguette\"},{\"optionid\":\"004\",\"optionvalue\":\"Multigrain Loaf\"},{\"optionid\":\"005\",\"optionvalue\":\"Sourdough Round\"}]",
             "groupvalue": {}
           }
         ]
@@ -8207,7 +8402,7 @@
                   "currencytype": null,
                   "api_name": "DisplayName",
                   "visible": true,
-                  "displayapiname": "BatchId",
+                  "displayapiname": "ProductionTime",
                   "inlineeditable": null,
                   "istitle": false,
                   "isdate": false,
@@ -8306,28 +8501,15 @@
               ],
               "filterfields": [
                 {
-                  "id": "001",
-                  "name": "Order Date Range",
-                  "lablekey": "entity-type-lbl",
-                  "seqno": 5,
-                  "filtercontroltype": "textbox",
-                  "isquickfilter": true,
-                  "api_name": "EntityType",
-                  "islookup": true,
-                  "masterid": "",
-                  "apioutputskey": "optionid",
-                  "apioutputvalue": "optionvalue"
-                },
-                {
                   "id": "002",
                   "name": "Customer Name",
                   "lablekey": "entity-type-lbl",
                   "seqno": 6,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "multiselect",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "004",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 },
@@ -8336,11 +8518,11 @@
                   "name": "Product Name",
                   "lablekey": "entity-type-lbl",
                   "seqno": 7,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "multiselect",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "0011",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 },
@@ -8349,11 +8531,11 @@
                   "name": "Product Date Range",
                   "lablekey": "entity-type-lbl",
                   "seqno": 7,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "datepicker",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "7800001",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 },
@@ -8579,6 +8761,33 @@
           "attrtype": "text",
           "api_name": "Status",
           "columnwidth": 100
+        },
+        {
+          "id": "production08",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "Status",
+          "columnwidth": 100
+        },
+        {
+          "id": "production09",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "Status",
+          "columnwidth": 100
+        },
+        {
+          "id": "production10",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "Status",
+          "columnwidth": 100
         }
       ]
     }
@@ -8588,7 +8797,7 @@
       "data": [
         {
           "id": "01",
-          "OrderID": "1001",
+          "OrderID": "ORD-1001",
           "ProductName": "Whole Wheat Loaf",
           "Qty": "120",
           "ProductionDate": "5/19/2025",
@@ -8601,7 +8810,7 @@
         },
         {
           "id": "02",
-          "OrderID": "1002",
+          "OrderID": "ORD-1002",
           "ProductName": "Ciabatta Rolls",
           "Qty": "90",
           "ProductionDate": "5/19/2025",
@@ -8614,7 +8823,7 @@
         },
         {
           "id": "02",
-          "OrderID": "1002",
+          "OrderID": "ORD-1002",
           "ProductName": "Ciabatta Rolls",
           "Qty": "90",
           "ProductionDate": "5/19/2025",
@@ -8627,7 +8836,7 @@
         },
         {
           "id": "04",
-          "OrderID": "1004",
+          "OrderID": "ORD-1004",
           "ProductName": "Multigrain Loaf",
           "Qty": "60",
           "ProductionDate": "5/19/2025",
@@ -8640,7 +8849,7 @@
         },
         {
           "id": "05",
-          "OrderID": "1005",
+          "OrderID": "ORD-1005",
           "ProductName": "Sourdough Round",
           "Qty": "80",
           "ProductionDate": "5/19/2025",
@@ -8653,7 +8862,7 @@
         }
       ],
 
-      "totalRecords": 20
+      "totalRecords": 5
     }
   },
 
@@ -8787,6 +8996,18 @@
             "masterid": "010",
             "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Approval\"}]",
             "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "0011",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Whole Wheat Flour\"},{\"optionid\":\"002\",\"optionvalue\":\"Salt\"},{\"optionid\":\"003\",\"optionvalue\":\"Yeast (Dry)\"},{\"optionid\":\"004\",\"optionvalue\":\"Water\"},{\"optionid\":\"005\",\"optionvalue\":\"Olive Oil\"}]",
+            "groupvalue": {}
+          },
+          {
+            "islookup": true,
+            "masterid": "00012",
+            "mastervalues": "[{\"optionid\":\"001\",\"optionvalue\":\"Active\"},{\"optionid\":\"002\",\"optionvalue\":\"InActive\"}]",
+            "groupvalue": {}
           }
         ]
       },
@@ -8821,7 +9042,7 @@
               "listfields": [
                 {
                   "id": "recipe00",
-                  "name": "Ingrdiant Name",
+                  "name": "Ingrediants Name",
                   "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
@@ -8839,7 +9060,7 @@
                 },
                 {
                   "id": "recipe01",
-                  "name": "Ingrdiant Code",
+                  "name": "Ingrediants Code",
                   "lablekey": "entity-code-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
@@ -8857,9 +9078,9 @@
                 },
                 {
                   "id": "recipe02",
-                  "name": "Ingrdiant Category",
+                  "name": "Ingrediants Category",
                   "lablekey": "entity-jobtitle-lbl",
-                  "columnwidth": 150,
+                  "columnwidth": 200,
                   "seqno": 1,
                   "masterid": "",
                   "controltype": "textbox",
@@ -8913,7 +9134,7 @@
               "filterfields": [
                 {
                   "id": "001",
-                  "name": "Ingerdiant Name",
+                  "name": "Ingrediant Name",
                   "lablekey": "entity-type-lbl",
                   "seqno": 5,
                   "filtercontroltype": "textbox",
@@ -8925,15 +9146,15 @@
                   "apioutputvalue": "optionvalue"
                 },
                 {
-                  "id": "002",
+                  "id": "003",
                   "name": "Status",
                   "lablekey": "entity-type-lbl",
                   "seqno": 6,
-                  "filtercontroltype": "textbox",
+                  "filtercontroltype": "multiselect",
                   "isquickfilter": true,
                   "api_name": "EntityType",
                   "islookup": true,
-                  "masterid": "",
+                  "masterid": "00012",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
                 }
@@ -8993,68 +9214,7 @@
       "owner": null,
       "isdefault": true,
       "last_accessed_time": null,
-      "filters": [
-        {
-          "id": "7ab60770-50f7-4851-a501-a813dc3212fgef134",
-          "filterid": "Lifecylce _Status",
-          "filterdisplayname": "Lifecycle Status",
-          "filtercontroltype": "Workflow",
-          "defaultvalue": "",
-          "filtercategory": "quick",
-          "isquickfilter": true,
-          "defaultvalall": ""
-        },
-        {
-          "id": "001",
-          "filterid": "Lifecylce _Status",
-          "filterdisplayname": "Opportunity Name",
-          "filtercontroltype": "textbox",
-          "defaultvalue": "",
-          "filtercategory": "quick",
-          "isquickfilter": true,
-          "defaultvalall": ""
-        },
-        {
-          "id": "002",
-          "filterid": "Lifecylce _Status",
-          "filterdisplayname": "Opportunity Name",
-          "filtercontroltype": "Workflow",
-          "defaultvalue": "",
-          "filtercategory": "quick",
-          "isquickfilter": true,
-          "defaultvalall": ""
-        },
-        {
-          "id": "003",
-          "filterid": "Lifecylce _Status",
-          "filterdisplayname": "Contact Name",
-          "filtercontroltype": "Workflow",
-          "defaultvalue": "",
-          "filtercategory": "quick",
-          "isquickfilter": true,
-          "defaultvalall": ""
-        },
-        {
-          "id": "004",
-          "filterid": "Lifecylce _Status",
-          "filterdisplayname": "Stage",
-          "filtercontroltype": "Workflow",
-          "defaultvalue": "",
-          "filtercategory": "quick",
-          "isquickfilter": true,
-          "defaultvalall": ""
-        },
-        {
-          "id": "005",
-          "filterid": "Lifecylce _Status",
-          "filterdisplayname": "Status",
-          "filtercontroltype": "Workflow",
-          "defaultvalue": "",
-          "filtercategory": "quick",
-          "isquickfilter": true,
-          "defaultvalall": ""
-        }
-      ],
+      "filters": [],
       "groupby": [],
       "columns": [
         {
@@ -9101,7 +9261,7 @@
           "controltype": "textbox",
           "attrtype": "text",
           "api_name": "RecipeCost",
-          "columnwidth": 100
+          "columnwidth": 200
         },
         {
           "id": "recipe03",
@@ -9110,6 +9270,15 @@
           "controltype": "textbox",
           "attrtype": "text",
           "api_name": "RecipeStatus",
+          "columnwidth": 100
+        },
+        {
+          "id": "recipe04",
+          "seqno": 1,
+          "masterid": "",
+          "controltype": "textbox",
+          "attrtype": "text",
+          "api_name": "Status",
           "columnwidth": 100
         }
       ]
