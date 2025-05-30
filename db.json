@@ -8822,17 +8822,17 @@
           "Status": "Yet to Start"
         },
         {
-          "id": "02",
-          "OrderID": "ORD-1002",
-          "ProductName": "Ciabatta Rolls",
-          "Qty": "90",
+          "id": "03",
+          "OrderID": "ORD-1003",
+          "ProductName": "Brioche Buns",
+          "Qty": "150",
           "ProductionDate": "5/19/2025",
-          "ProductionTime": "6:30 AM",
-          "BatchId": "BTCH-2402",
-          "NoOfBatches": "5",
-          "Recipe": "Ciabatta Recipe",
-          "AssignedTo": "Team B",
-          "Status": "Yet to Start"
+          "ProductionTime": "8:00 AM",
+          "BatchId": "BTCH-2403",
+          "NoOfBatches": "4",
+          "Recipe": "Brioche Recipe",
+          "AssignedTo": "Team C",
+          "Status": "Completed"
         },
         {
           "id": "04",
@@ -8859,10 +8859,74 @@
           "Recipe": "Sourdough Recipe",
           "AssignedTo": "Team B",
           "Status": "InProgress"
+        },
+        {
+          "id": "06",
+          "OrderID": "ORD-1006",
+          "ProductName": "Focaccia Bread",
+          "Qty": "70",
+          "ProductionDate": "5/19/2025",
+          "ProductionTime": "12:30 PM",
+          "BatchId": "BTCH-2406",
+          "NoOfBatches": "3",
+          "Recipe": "Focaccia Recipe",
+          "AssignedTo": "Team A",
+          "Status": "Yet to Start"
+        },
+        {
+          "id": "07",
+          "OrderID": "ORD-1007",
+          "ProductName": "Rye Loaf",
+          "Qty": "100",
+          "ProductionDate": "5/19/2025",
+          "ProductionTime": "2:00 PM",
+          "BatchId": "BTCH-2407",
+          "NoOfBatches": "5",
+          "Recipe": "Rye Recipe",
+          "AssignedTo": "Team B",
+          "Status": "InProgress"
+        },
+        {
+          "id": "08",
+          "OrderID": "ORD-1008",
+          "ProductName": "Bagels",
+          "Qty": "200",
+          "ProductionDate": "5/19/2025",
+          "ProductionTime": "3:30 PM",
+          "BatchId": "BTCH-2408",
+          "NoOfBatches": "8",
+          "Recipe": "Bagel Recipe",
+          "AssignedTo": "Team D",
+          "Status": "Completed"
+        },
+        {
+          "id": "09",
+          "OrderID": "ORD-1009",
+          "ProductName": "Pretzels",
+          "Qty": "90",
+          "ProductionDate": "5/19/2025",
+          "ProductionTime": "5:00 PM",
+          "BatchId": "BTCH-2409",
+          "NoOfBatches": "2",
+          "Recipe": "Pretzel Recipe",
+          "AssignedTo": "Team A",
+          "Status": "Yet to Start"
+        },
+        {
+          "id": "10",
+          "OrderID": "ORD-1010",
+          "ProductName": "French Baguette",
+          "Qty": "110",
+          "ProductionDate": "5/19/2025",
+          "ProductionTime": "6:30 PM",
+          "BatchId": "BTCH-2410",
+          "NoOfBatches": "7",
+          "Recipe": "Baguette Recipe",
+          "AssignedTo": "Team C",
+          "Status": "InProgress"
         }
       ],
-
-      "totalRecords": 5
+      "totalRecords": 10
     }
   },
 
