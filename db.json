@@ -8538,19 +8538,6 @@
                   "masterid": "7800001",
                   "apioutputskey": "optionid",
                   "apioutputvalue": "optionvalue"
-                },
-                {
-                  "id": "004",
-                  "name": "Load Orders",
-                  "lablekey": "entity-type-lbl",
-                  "seqno": 7,
-                  "filtercontroltype": "textbox",
-                  "isquickfilter": true,
-                  "api_name": "EntityType",
-                  "islookup": true,
-                  "masterid": "",
-                  "apioutputskey": "optionid",
-                  "apioutputvalue": "optionvalue"
                 }
               ],
               "groupbyfields": [
@@ -9106,7 +9093,7 @@
               "listfields": [
                 {
                   "id": "recipe00",
-                  "name": "Ingrediants Name",
+                  "name": "Ingredients Name",
                   "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
@@ -9124,7 +9111,7 @@
                 },
                 {
                   "id": "recipe01",
-                  "name": "Ingrediants Code",
+                  "name": "Ingredients Code",
                   "lablekey": "entity-code-lbl",
                   "columnwidth": 150,
                   "seqno": 1,
@@ -9142,7 +9129,7 @@
                 },
                 {
                   "id": "recipe02",
-                  "name": "Ingrediants Category",
+                  "name": "Ingredients Category",
                   "lablekey": "entity-jobtitle-lbl",
                   "columnwidth": 200,
                   "seqno": 1,
@@ -9198,7 +9185,7 @@
               "filterfields": [
                 {
                   "id": "001",
-                  "name": "Ingrediant Name",
+                  "name": "Ingredient Name",
                   "lablekey": "entity-type-lbl",
                   "seqno": 5,
                   "filtercontroltype": "textbox",
